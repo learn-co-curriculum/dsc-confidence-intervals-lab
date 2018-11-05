@@ -9,11 +9,11 @@ Remember that a sample data distribution is the distribution of the data points 
 
 As seen in previous lab,  point estimates can provide some idea of a population parameter like the mean, but estimates are prone to error and also, taking multiple samples to get improved estimates may not be feasible all the time. 
 
-## Objectives: 
-You will be able to
+## Objectives
+You will be able to:
 * Calculate and interpret confidence intervals
 
-### Data 
+## Data 
 
 if we wanted to know the average age of registered voters in some elections, we could take a survey of registered voters and then use the average age of the respondents as a point estimate of the average age of the population as a whole.
 
@@ -229,7 +229,7 @@ Let's visualise the distribution of sample means to check for the normality.
 
 The sampling distribution appears to be roughly normal, despite the bimodal population distribution that the samples were drawn from. This is where central limit theorem comes into play. In addition, the mean of the sampling distribution approaches the true population mean. The more samples we take, the better our estimate of the population parameter is likely to be. 
 
-### What is a Confidence Interval?
+## What is a Confidence Interval?
 
 A **Confidence Interval** is a range of values above and below the point estimate that captures the true population parameter at some predetermined confidence level. If we **want** to have a 95% chance of capturing the true population parameter with a point estimate and a corresponding confidence interval, we would set confidence level to 95%. *Higher confidence levels result in a wider confidence intervals.*
 
@@ -362,7 +362,7 @@ plt.figure(figsize=(15,9))
 
 Notice that in the plot above, most of the 95% confidence intervals overlap the red line marking the true mean. This is to be expected: since a 95% confidence interval captures the true mean 95% of the time, we'd expect our interval to miss the true mean 5% of the time.
 
-### Interpreting the Confidence Interval
+## Interpreting the Confidence Interval
 
 There are two interpretations we can derive from above simulation, and one of them is wrong.
 
