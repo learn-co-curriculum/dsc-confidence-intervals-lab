@@ -50,15 +50,11 @@ Calculate the mean for population and visualize the distribution. Also, describe
 
 
 ```python
-print ("The mean of population is:", population_ages.mean())
 
 # Convert the population into a pandas dataframe pop_ages
 pop_ages = None
 
-# Calculate descriptive statistics for pop_ages
-
-# Draw a histogram for pop ages
-
+# Calculate and print descriptive statistics for pop_ages
 
 # The mean of population is: 42.985332
 
@@ -71,83 +67,12 @@ pop_ages = None
 # 75%	54.000000
 # max	84.000000
 
-# A Histogram of population
 ```
 
 
 ```python
-
+# Draw a histogram for pop ages
 ```
-
-    The mean of population is: 42.985332
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>250000.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>42.985332</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>13.211628</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>18.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>29.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>47.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>54.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>84.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-![png](index_files/index_7_2.png)
-
 
 Lets take a random sample of size 500 from this distribution and calculate sample mean and standard deviation. Also, work out the difference between population and sample mean 
 
@@ -163,10 +88,12 @@ sample = None
 sample_mean = None
 sample_std = None
 
-#print ("Sample mean:", sample_mean,"Sample std.:", sample_std)
+#print ("Sample mean:", sample_mean)
+#print ("Sample std.:", sample_std)
 #print ("Difference between means:", population_ages.mean() - sample_mean)
 
-# Sample mean: 43.49 Sample std.: 0.580720070257607
+# Sample mean: 43.49 
+# Sample std.: 12.98529552994463
 # Difference between means: -0.5046680000000023
 ```
 
@@ -183,15 +110,14 @@ To illustrate, let's create a sampling distribution by taking 100 samples from o
 ```python
 np.random.seed(15)
 
-# Initliaze a list to store sample mean values
-
 point_estimates = []         # Make empty list to hold point estimates
 
 # Take 100 samples and generate 100 point estimates using a for loop. 
 # append sample means to get point estimates
 
 
-#pd.DataFrame(point_estimates).describe()
+# Convert the point_estimates into a pandas dataframe
+# Calculate and print descriptive statistics for the dataframe
 
 # count	100.000000
 # mean	42.959380
@@ -210,22 +136,6 @@ Let's visualise the distribution of sample means to check for the normality.
 ```python
 #Visualize the point estimates by plotting a density plot (use pandas)
 ```
-
-
-```python
- 
-```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a116832b0>
-
-
-
-
-![png](index_files/index_14_1.png)
-
 
 The sampling distribution appears to be roughly normal, despite the bimodal population distribution that the samples were drawn from. This is where central limit theorem comes into play. In addition, the mean of the sampling distribution approaches the true population mean. The more samples we take, the better our estimate of the population parameter is likely to be. 
 
@@ -260,9 +170,10 @@ Create a function to input population and sample data to calculate the confidenc
 ```python
 def conf_interval(pop, sample):
     '''
-    Input: population , sample 
-    Output: z-critical, Margin of error, Confidence interval
+    Function input: population , sample 
+    Function output: z-critical, Margin of error, Confidence interval
     '''
+    sample_size = 500
     n = len(sample)
     x_hat = sample.mean()
 
@@ -336,29 +247,16 @@ for sample in range(25):
     # Calculate and append sample means and conf intervals for each iteration
 
 
-plt.figure(figsize=(15,9))
-
-# plot the mean and confidence interval for each sample as error bars
-
-
-# plot the population mean 
 ```
 
 
 ```python
+# plot the mean and confidence interval for each sample as error bars
+# plot the population mean 
+
+plt.figure(figsize=(15,9))
 
 ```
-
-
-
-
-    <matplotlib.collections.LineCollection at 0x1a2b222550>
-
-
-
-
-![png](index_files/index_21_1.png)
-
 
 Notice that in the plot above, most of the 95% confidence intervals overlap the red line marking the true mean. This is to be expected: since a 95% confidence interval captures the true mean 95% of the time, we'd expect our interval to miss the true mean 5% of the time.
 
