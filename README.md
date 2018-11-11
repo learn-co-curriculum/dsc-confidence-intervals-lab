@@ -71,35 +71,12 @@ print (pop_ages.describe())
 
 ```
 
-                     Age
-    count  250000.000000
-    mean       42.985332
-    std        13.211628
-    min        18.000000
-    25%        29.000000
-    50%        47.000000
-    75%        54.000000
-    max        84.000000
-
-
 
 ```python
 # Draw a histogram for pop ages
 pd.DataFrame(pop_ages).hist(bins='auto',figsize=(9,9))
 
 ```
-
-
-
-
-    array([[<matplotlib.axes._subplots.AxesSubplot object at 0x11fe7ef98>]],
-          dtype=object)
-
-
-
-
-![png](index_files/index_7_1.png)
-
 
 Lets take a random sample of size 500 from this distribution and calculate sample mean and standard deviation. Also, work out the difference between population and sample mean 
 
@@ -124,11 +101,6 @@ print ("Difference between means:", population_ages.mean() - sample_mean)
 # Sample mean: 43.49 Sample std.: 12.98529552994463
 # Difference between means: -0.5046680000000023
 ```
-
-    Sample mean: 43.49
-    Sample std.: 12.98529552994463
-    Difference between means: -0.5046680000000023
-
 
 We can see there is a small difference between sample mean and population mean. A incrase in sample size can help reduce this difference. 
 
@@ -168,69 +140,6 @@ pd.DataFrame(point_estimates).describe()
 # max	44.492000
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>100.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>42.959380</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.586404</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>41.296000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>42.530000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>42.960000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>43.356000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>44.492000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 Let's visualise the distribution of sample means to check for the normality.
 
 
@@ -239,22 +148,6 @@ Let's visualise the distribution of sample means to check for the normality.
 pd.DataFrame(point_estimates).plot(kind="density",  # Plot sample mean density
                                    figsize=(9,9),
                                    xlim=(40,45))   
-```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a276859b0>
-
-
-
-
-![png](index_files/index_13_1.png)
-
-
-
-```python
- 
 ```
 
 The sampling distribution appears to be roughly normal, despite the bimodal population distribution that the samples were drawn from. This is where central limit theorem comes into play. In addition, the mean of the sampling distribution approaches the true population mean. The more samples we take, the better our estimate of the population parameter is likely to be. 
@@ -336,16 +229,6 @@ print(confidence_interval)
 # (41.86997330019931, 44.186026699800685)
 ```
 
-    Z-critical value:
-    1.959963984540054
-    
-    Margin of error
-    1.158026699800684
-    
-    Confidence interval:
-    (41.86997330019931, 44.186026699800685)
-
-
 > Note that with calculated confidence intervals, we captured the true population mean of 42.9
 
 We can create several such confidence intervals and visualise them to get a better sense of what it means to "capture" the true mean. 
@@ -409,17 +292,6 @@ plt.hlines(xmin=0, xmax=25,
            linewidth=2.0,
            color="red")
 ```
-
-
-
-
-    <matplotlib.collections.LineCollection at 0x1a27c0aa90>
-
-
-
-
-![png](index_files/index_21_1.png)
-
 
 Notice that in the plot above, most of the 95% confidence intervals overlap the red line marking the true mean. This is to be expected: since a 95% confidence interval captures the true mean 95% of the time, we'd expect our interval to miss the true mean 5% of the time.
 
