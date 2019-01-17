@@ -1,5 +1,5 @@
 
-## Confidence Intervals
+## Confidence Intervals - Lab
 
 ## Introduction
 
