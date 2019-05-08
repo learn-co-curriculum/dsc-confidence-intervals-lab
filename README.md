@@ -1,5 +1,5 @@
 
-## Confidence Intervals - Lab
+# Confidence Intervals - Lab
 
 ## Introduction
 
@@ -167,7 +167,7 @@ Where σ (sigma) is the population standard deviation, n is sample size, and z i
 >The z-critical value is the number of standard deviations you'd have to go from the mean of the normal distribution to capture the proportion of the data associated with the desired confidence level. 
 
 For instance, we know that roughly 95% of the data in a normal distribution lies within 2 standard deviations of the mean, so we could use 2 as the z-critical value for a 95% confidence interval as shown in this image:
-![](Normal-Distribution.png)
+![](images/Normal-Distribution.png)
 
 **If we want our confidence level — i.e., how confident we are that the true value of the parameter lies within the confidence interval — to be:**
 - **90%**: The z-score multiplier should be **z = 1.645**, because 90% of the area under the $Z ~ N(0, 1)$ normal distribution lies between -1.645 and 1.645.
@@ -310,4 +310,4 @@ Why is interpretation 1 wrong? It assigns a probability to the true value. In Fr
 
 ## Summary
 
-In this lab we saw an introduction to confidence intervals and how to construct them from random samples. We also saw how due to central limit theorem, the mean of sample means tend to be a normal distribution even if population is bimodal. We also saw how z value can be used to define the confidence interval based on confidence level required and the size of samples. We learnt how to correctly interpret a confidence interval. 
+In this lab we saw an introduction to confidence intervals and how to construct them from random samples. We also saw how due to central limit theorem, the mean of sample means tend to be a normal distribution even if population is bimodal. We also saw how z value can be used to define the confidence interval based on confidence level required and the size of samples. We learned how to correctly interpret a confidence interval. 
