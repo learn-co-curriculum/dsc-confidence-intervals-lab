@@ -269,7 +269,7 @@ There are two interpretations we can derive from above simulation, and one of th
 > There is a 95% probability that the mean voter age is between 41.6 and 43.9.
 
 **Interpretation 2 (correct):**
- >If we pulled 500 samples and constructed confidence intervals in the same manner, we expect that 95 of the intervals would contain the true mean of population age. 
+ >If we pulled 500 samples and constructed confidence intervals in the same manner, we expect that 95% of the intervals would contain the true mean of population age. 
 
 Why is interpretation 1 wrong? It assigns a probability to the true value. In Frequentist statistics, the true value is fixed and the data is random. Confidence intervals make a statement of probability about the confidence interval range that could contain the true value.
 
