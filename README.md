@@ -1,5 +1,5 @@
 
-## Confidence Intervals - Lab
+# Confidence Intervals - Lab
 
 ## Introduction
 
@@ -9,11 +9,11 @@ Remember that a sample data distribution is the distribution of the data points 
 
 As seen in previous lab,  point estimates can provide some idea of a population parameter like the mean, but estimates are prone to error and also, taking multiple samples to get improved estimates may not be feasible all the time. 
 
-## Objectives: 
-You will be able to
+## Objectives
+You will be able to:
 * Calculate and interpret confidence intervals
 
-### Data 
+## Data 
 
 if we wanted to know the average age of registered voters in some elections, we could take a survey of registered voters and then use the average age of the respondents as a point estimate of the average age of the population as a whole.
 
@@ -97,7 +97,7 @@ sample_std = None
 # Difference between means: -0.5046680000000023
 ```
 
-We can see there is a small difference between sample mean and population mean. A incrase in sample size can help reduce this difference. 
+We can see there is a small difference between sample mean and population mean. A increase in sample size can help reduce this difference. 
 
 The central limit theorem states the distribution of **many sample means**, known as a **sampling distribution**, will be normally distributed. This rule holds even if the underlying distribution itself is not normally distributed as we saw above. 
 
@@ -139,7 +139,7 @@ Let's visualise the distribution of sample means to check for the normality.
 
 The sampling distribution appears to be roughly normal, despite the bimodal population distribution that the samples were drawn from. This is where central limit theorem comes into play. In addition, the mean of the sampling distribution approaches the true population mean. The more samples we take, the better our estimate of the population parameter is likely to be. 
 
-### What is a Confidence Interval?
+## What is a Confidence Interval?
 
 A **Confidence Interval** is a range of values above and below the point estimate that captures the true population parameter at some predetermined confidence level. If we **want** to have a 95% chance of capturing the true population parameter with a point estimate and a corresponding confidence interval, we would set confidence level to 95%. *Higher confidence levels result in a wider confidence intervals.*
 
@@ -154,7 +154,7 @@ Where σ (sigma) is the population standard deviation, n is sample size, and z i
 >The z-critical value is the number of standard deviations you'd have to go from the mean of the normal distribution to capture the proportion of the data associated with the desired confidence level. 
 
 For instance, we know that roughly 95% of the data in a normal distribution lies within 2 standard deviations of the mean, so we could use 2 as the z-critical value for a 95% confidence interval as shown in this image:
-![](Normal-Distribution.png)
+![](images/Normal-Distribution.png)
 
 **If we want our confidence level — i.e., how confident we are that the true value of the parameter lies within the confidence interval — to be:**
 - **90%**: The z-score multiplier should be **z = 1.645**, because 90% of the area under the $Z ~ N(0, 1)$ normal distribution lies between -1.645 and 1.645.
@@ -260,7 +260,7 @@ plt.figure(figsize=(15,9))
 
 Notice that in the plot above, most of the 95% confidence intervals overlap the red line marking the true mean. This is to be expected: since a 95% confidence interval captures the true mean 95% of the time, we'd expect our interval to miss the true mean 5% of the time.
 
-### Interpreting the Confidence Interval
+## Interpreting the Confidence Interval
 
 There are two interpretations we can derive from above simulation, and one of them is wrong.
 
@@ -269,10 +269,10 @@ There are two interpretations we can derive from above simulation, and one of th
 > There is a 95% probability that the mean voter age is between 41.6 and 43.9.
 
 **Interpretation 2 (correct):**
- >If we pulled 500 samples and constructed confidence intervals in the same manner, we expect that 95 of the intervals would contain the true mean of population age. 
+ >If we pulled 100 samples and constructed confidence intervals in the same manner, we expect that 95 of the intervals would contain the true mean of population age. 
 
 Why is interpretation 1 wrong? It assigns a probability to the true value. In Frequentist statistics, the true value is fixed and the data is random. Confidence intervals make a statement of probability about the confidence interval range that could contain the true value.
 
 ## Summary
 
-In this lab we saw an introduction to confidence intervals and how to construct them from random samples. We also saw how due to central limit theorem, the mean of sample means tend to be a normal distribution even if population is bimodal. We also saw how z value can be used to define the confidence interval based on confidence level required and the size of samples. We learnt how to correctly interpret a confidence interval. 
+In this lab we saw an introduction to confidence intervals and how to construct them from random samples. We also saw how due to central limit theorem, the mean of sample means tend to be a normal distribution even if population is bimodal. We also saw how z value can be used to define the confidence interval based on confidence level required and the size of samples. We learned how to correctly interpret a confidence interval. 
