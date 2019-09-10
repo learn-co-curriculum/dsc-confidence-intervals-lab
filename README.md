@@ -158,7 +158,7 @@ A **Confidence Interval** is a range of values above and below the point estimat
 
 We calculate a confidence interval by taking a point estimate and then adding and subtracting a **margin of error** to create a range. Margin of error is based on your desired confidence level, the spread of the data and the size of your sample. The way you calculate the margin of error depends on whether you know the standard deviation of the population or not.
 
-the margin of error for a known population stadard deviation is:
+the margin of error for a known population standard deviation is:
 
 > ** Margin of Error = z ∗ σ / √n**
 
