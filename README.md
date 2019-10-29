@@ -11,7 +11,8 @@ As seen in a previous lab,  point estimates can provide some idea of a populatio
 
 ## Objectives
 You will be able to:
-* Calculate and interpret confidence intervals
+* Calculate confidence intervals
+* Interpret confidence intervals in relation to true population parameters
 
 ## Data 
 
@@ -36,7 +37,7 @@ plt.style.use('fivethirtyeight')
 %matplotlib inline
 ```
 
-The Poisson distribution is the discrete probability distribution of the number of events occurring in a given time period, given the average number of times the event occurs over that time period. We shall use a Poisson distribution to express a bimodal distribution.
+The Poisson distribution is the discrete probability distribution of the number of events occurring in a given time period, given the average number of times the event occurs over that time period. We shall use a Poisson distribution to construct a bimodal distribution.
 
 
 ```python
@@ -157,11 +158,11 @@ For instance, we know that roughly 95% of the data in a normal distribution lies
 ![](images/Normal-Distribution.png)
 
 **If we want our confidence level — i.e., how confident we are that the true value of the parameter lies within the confidence interval — to be:**
-- **90%**: The z-score multiplier should be **z = 1.645**, because 90% of the area under the $Z ~ N(0, 1)$ normal distribution lies between -1.645 and 1.645.
-- **95%**: The z-score multiplier should be **z = 1.96**, because 95% of the area under the $Z ~ N(0, 1)$ normal distribution lies between -1.96 and 1.96.
-- **99%**: The z-score multiplier should be **z = 2.575**, because 99% of the area under the $Z ~ N(0, 1)$ normal distribution lies between -2.575 and 2.575.
+- **90%**: The z-score multiplier should be **z = 1.645**, because 90% of the area under the $Z \text{~} N(0, 1)$ normal distribution lies between -1.645 and 1.645.
+- **95%**: The z-score multiplier should be **z = 1.96**, because 95% of the area under the $Z \text{~} N(0, 1)$ normal distribution lies between -1.96 and 1.96.
+- **99%**: The z-score multiplier should be **z = 2.575**, because 99% of the area under the $Z \text{~} N(0, 1)$ normal distribution lies between -2.575 and 2.575.
 
-It is more auitable to get z-critical values with `stats.norm.ppf()` as the results are more accurate.
+It is more suitable to get z-critical values with `stats.norm.ppf()` as the results are more accurate.
 > **`stats.norm.ppf(q, loc=0, scale=1)`**	is a percent point function (inverse of cdf — percentiles).
 
 Create a function to input population and sample data to calculate the confidence intervals:
@@ -220,7 +221,7 @@ def conf_interval(pop, sample):
 
 We can create several such confidence intervals and visualize them to get a better sense of what it means to "capture" the true mean. 
 
-Lets set a sample size of 1000 and take 25 samples to calculate the confidence intervals using the function above. 
+Let's set a sample size of 1000 and take 25 samples to calculate the confidence intervals using the function above. 
 
 
 ```python
