@@ -458,14 +458,14 @@ def conf_interval(pop, sample):
     z = stats.norm.ppf(q = 0.975)  #  z-critical value for 95% confidence
 
     #Calculate the population std from data
-    pop_stdev = population_ages.std()
+    pop_stdev = pop.std()
 
     # Calculate the margin of error using formula given above
     moe = z * (pop_stdev/math.sqrt(sample_size))
 
     # Calculate the confidence interval by applying margin of error to sample mean 
     # (mean - margin of error, mean+ margin of error)
-    conf = (x_hat - moe,x_hat + moe)
+    conf = (x_hat - moe, x_hat + moe)
     
     return z, moe, conf
 
