@@ -374,8 +374,6 @@ for sample in range(25):
 
     pop_stdev = population_ages.std()  # Get the population standard deviation
 
-    stats.norm.ppf(q = 0.025)
-
     margin_of_error = z_critical * (pop_stdev/math.sqrt(sample_size))
 
     confidence_interval = (sample_mean - margin_of_error,
