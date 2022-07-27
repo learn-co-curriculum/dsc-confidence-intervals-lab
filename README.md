@@ -1,4 +1,3 @@
-
 # Confidence Intervals - Lab
 
 ## Introduction
@@ -10,7 +9,9 @@ Remember that a sample data distribution is the distribution of the data points 
 As seen in a previous lab,  point estimates can provide some idea of a population parameter like the mean, but estimates are prone to error and also, taking multiple samples to get improved estimates may not be feasible all the time. 
 
 ## Objectives
+
 You will be able to:
+
 * Calculate confidence intervals
 * Interpret confidence intervals in relation to true population parameters
 
@@ -154,7 +155,9 @@ pd.DataFrame(pop_ages).hist(bins='auto',figsize=(9,9))
 
 
 
+    
 ![png](index_files/index_11_1.png)
+    
 
 
 Let's take a random sample of size 500 from this distribution and calculate the sample mean and standard deviation. Also, work out the difference between the population and sample mean. 
@@ -358,7 +361,9 @@ pd.DataFrame(point_estimates).plot(kind="density",  # Plot sample mean density
 
 
 
+    
 ![png](index_files/index_20_1.png)
+    
 
 
 The sampling distribution appears to be roughly normal, despite the bimodal population distribution that the samples were drawn from. This is where the central limit theorem comes into play. In addition, the mean of the sampling distribution approaches the true population mean. The more samples we take, the better our estimate of the population parameter is likely to be. 
@@ -611,7 +616,9 @@ plt.hlines(xmin=0, xmax=25,
 
 
 
+    
 ![png](index_files/index_30_1.png)
+    
 
 
 Notice that in the plot above, most of the 95% confidence intervals overlap the red line marking the true mean. This is to be expected: since a 95% confidence interval captures the true mean 95% of the time, we'd expect our interval to miss the true mean 5% of the time.
