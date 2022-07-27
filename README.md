@@ -1,4 +1,3 @@
-
 # Confidence Intervals - Lab
 
 ## Introduction
@@ -10,7 +9,9 @@ Remember that a sample data distribution is the distribution of the data points 
 As seen in a previous lab,  point estimates can provide some idea of a population parameter like the mean, but estimates are prone to error and also, taking multiple samples to get improved estimates may not be feasible all the time. 
 
 ## Objectives
+
 You will be able to:
+
 * Calculate confidence intervals
 * Interpret confidence intervals in relation to true population parameters
 
