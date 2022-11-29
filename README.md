@@ -402,7 +402,7 @@ plt.figure(figsize=(15,9))
 
 plt.errorbar(x=np.arange(0.1, 25, 1), 
              y=sample_means, 
-             yerr=[(top-bot)/2 for top,bot in intervals],
+             yerr=[(top-bot)/2 for bot, top in intervals],
              fmt='o')
 
 plt.hlines(xmin=0, xmax=25,
