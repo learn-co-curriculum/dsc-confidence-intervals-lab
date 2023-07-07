@@ -275,7 +275,7 @@ Where σ (sigma) is the population standard deviation, n is sample size, and z i
 >The z-critical value is the number of standard deviations you'd have to go from the mean of the normal distribution to capture the proportion of the data associated with the desired confidence level. 
 
 For instance, we know that roughly 95% of the data in a normal distribution lies within 2 standard deviations of the mean, so we could use 2 as the z-critical value for a 95% confidence interval as shown in this image:
-![](normal_distribution.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-confidence-intervals-lab/master/images/normal_distribution.png" alt="Illustration of a normal distribution which shows that about 95% of the data will fall within 2 standard deviations of the mean">
 
 **If we want our confidence level — i.e., how confident we are that the true value of the parameter lies within the confidence interval — to be:**
 - **90%**: The z-score multiplier should be **z = 1.645**, because 90% of the area under the $Z \text{~} N(0, 1)$ normal distribution lies between -1.645 and 1.645.
@@ -402,7 +402,7 @@ plt.figure(figsize=(15,9))
 
 plt.errorbar(x=np.arange(0.1, 25, 1), 
              y=sample_means, 
-             yerr=[(top-bot)/2 for bot, top in intervals],
+             yerr=[abs(top-bot)/2 for top,bot in intervals],
              fmt='o')
 
 plt.hlines(xmin=0, xmax=25,
